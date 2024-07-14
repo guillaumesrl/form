@@ -32,6 +32,11 @@ body {
     position: relative;
 }
 
+.layer img {
+    width: 15%;
+    margin-right: 30px;
+}
+
 .right {
     flex: 1;
     display: flex;
@@ -82,7 +87,7 @@ body {
 
 .top p:nth-child(3) {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 form {
@@ -94,22 +99,73 @@ form {
 
 .form-row {
     display: flex;
-    gap: 60px;
+    flex-wrap: wrap;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 60px;
+    margin-bottom: 10px;
 }
+
 
 label {
     font-size: 0.8rem;
     font-weight: 700;
     color: #797676;
+    margin-bottom: 5px;
 }
 
 input {
-    height: 2rem;
-    width: 250px;
+    height: 2.5rem;
+    width: 100%;
+    max-width: 300px;
+    padding: 0 0.8rem;
+    border: 1px solid rgb(204, 202, 202);
+    border-radius: 5px;
+}
+
+input:focus {
+    box-shadow: 2px 5px 5px rgb(221, 221, 221);
+}
+
+input[type="password"]:invalid {
+    border: 1px solid red;
+}
+
+.pwd-container {
+    position: relative;
+}
+
+input:invalid + .error-message {
+    display: block;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    display: none;
+    top: 100%;
+}
+
+.bottom .login {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.bottom a {
+    text-decoration: none;
+}
+
+.bottom button {
+    padding: 10px 45px;
+    border-radius: 7px;
+    border: 1px solid #004E86;
+    color: white;
+    font-weight: 700;
+    background-color: #004E86;
 }
 
