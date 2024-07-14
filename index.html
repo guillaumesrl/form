@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="left">
+        <div class="layer">
+            <img src="images/logo2.png" alt="logo">
+            <h1>The ski company</h1>
+        </div>
+    </div>
+    <div class="right">
+        <div class="top">
+            <p>Soufflez, inspirez. Vous y êtes presque.</p>
+            <p>Vous n'êtes plus qu'à quelques clics de passer les plus belles vacances de votre vie. </p>
+            <p><span class="brand">The Ski Company</span> est déjà aux petits soins pour que tout soit inoubliable.</p>
+        </div>
+        <div class="middle">
+            <p>C'est parti !</p>
+            <form action="https://httpbin.org/anything" method="post" id="create">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">FIRST NAME</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">LAST NAME</label>
+                        <input type="text" id="lastname" name="lastname">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">PHONE NUMBER</label>
+                        <input type="tel" id="number" name="number" pattern="^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="pwd-container">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" name="password1" minlength="8" required>
+                            <span class="error-message">* Les mots de passe ne correspondent pas</span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="pwd-container">
+                            <label for="lastname">CONFIRM PASSWORD</label>
+                            <input type="password" id="lastname" name="password2" minlength="8" required>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="bottom">
+            <button type="submit" form="create" > Create Account</button>
+            <div class="login">
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
